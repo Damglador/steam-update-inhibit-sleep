@@ -9,3 +9,10 @@ dependencies = [
     "inotify-simple>=1.3.5",
     "vdf>=3.4",
 ]
+
+[project.scripts]
+steam-update-inhibit-sleep = "steam-update-inhibit-sleep:main"
+
+[project.urls]
+Repository = "https://github.com/Damglador/steam-update-inhibit-sleep.git"
+Issues = "https://github.com/Damglador/steam-update-inhibit-sleep/issues"
