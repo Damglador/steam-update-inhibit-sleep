@@ -1,7 +1,7 @@
 [project]
 name = "steam-update-inhibit-sleep"
 version = "0.1.0"
-description = "Leave Steam installing stuff without system going to sleep until it's finished"
+description = "Don't worry about system suspending when Steam installs stuff"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
