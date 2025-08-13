@@ -7,9 +7,6 @@ from inotify_simple import INotify, flags
 import vdf
 from pathlib import Path as path
 
-import setproctitle
-setproctitle.setproctitle("python-watcher")
-
 bus = SystemBus()
 login1 = bus.get_object("org.freedesktop.login1", "/org/freedesktop/login1")
 manager = Interface(login1, "org.freedesktop.login1.Manager")
