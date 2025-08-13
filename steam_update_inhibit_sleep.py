@@ -121,8 +121,3 @@ class InotifyThread(threading.Thread):
             if not self.__write.closed:
                 self.__write.write(b"\x00")
                 self.__write.close()
-
-try:
-    main()
-except KeyboardInterrupt:
-    pass
