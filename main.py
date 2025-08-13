@@ -122,10 +122,7 @@ class InotifyThread(threading.Thread):
                 self.__write.write(b"\x00")
                 self.__write.close()
 
-
 try:
     main()
 except KeyboardInterrupt:
     print("Exiting")
-
-
