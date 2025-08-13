@@ -1,0 +1,19 @@
+#!/bin/bash
+
+pid=$1
+ticks=$(getconf CLK_TCK)
+
+# Збираємо PID-и (основний + всі дочірні)
+pids=$(pstree -p $pid | grep -oP '\(\K[0-9]+(?=\))')
+pids="$pid $pids"
+
+total=0
+for p in $pids; do
+  read utime stime < <(awk '{print $14, $15}' /proc/$p/stat 2>/dev/null)
+  if [[ -n "$utime" && -n "$stime" ]]; then
+    total=$((total + utime + stime))
+  fi
+done
+
+# Переводимо в секунди
+echo "scale=2; $total / $ticks" | bc
