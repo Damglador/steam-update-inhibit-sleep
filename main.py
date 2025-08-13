@@ -125,4 +125,4 @@ class InotifyThread(threading.Thread):
 try:
     main()
 except KeyboardInterrupt:
-    print("Exiting")
+    pass
