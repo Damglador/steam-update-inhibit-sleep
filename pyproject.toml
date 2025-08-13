@@ -3,6 +3,7 @@ name = "steam-update-inhibit-sleep"
 version = "0.1.0"
 description = "Don't worry about system suspending when Steam installs stuff"
 readme = "README.md"
+license-files = ["LICENSE"]
 requires-python = ">=3.13"
 dependencies = [
     "dbus-python>=1.4.0",
